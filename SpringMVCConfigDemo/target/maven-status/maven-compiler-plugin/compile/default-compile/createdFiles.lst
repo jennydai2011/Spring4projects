@@ -1,0 +1,3 @@
+com\learn\spring\springmvcconfigdemo\controllers\DefaultController.class
+com\learn\spring\springmvcconfigdemo\config\Config.class
+com\learn\spring\springmvcconfigdemo\config\WebInitializer.class
