@@ -1,0 +1,38 @@
+install 
+1. node js(https://nodejs.org/) -> npm
+2. java 8 : http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+3. angularJS cli: https://cli.angular.io/
+  npm install -g @angular/cli
+  
+
+Steps:
+//generate Spring boot project
+1. go to http://start.spring.io/
+ select Gradle project
+ select Spring boot 2 snapshot
+ select dependencies: web
+ enter group Id: com.learning
+ enter app name: angular2withspringboot
+ 
+ 2) generate project
+ 3) download generated zip file, unzip to a folder
+
+// generate angularjs2 project
+2. open dos command window to the unziped spring boot project folder
+   >cd angular2withspringboot
+   
+3. >ng new "angular2-frontend"( this is the angular js project folder)
+
+4. after angular2-frontend created, 
+   >cd angular2-frontend
+     
+5. >ng build(generate js files under /dist)
+
+6. >xcopy "angular2-frontend/dist" "src/main/resources/public/"
+
+7.>gradlew bootRun
+  end result is a server run
+  
+8. open browser : http://localhost:8080
+   
+   display "app works!"
