@@ -43,3 +43,8 @@ Notes
 	spring-boot-starter：核心模块，包括自动配置支持、日志和YAML；
 
 	spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito
+  4. controller
+  	@RestController take care of jason, no need to config jackson
+  5.Traditional web servlet in SpringBoot app
+	1. @WebServlet, doGet, doPost
+	2. @ServletComponentScan
