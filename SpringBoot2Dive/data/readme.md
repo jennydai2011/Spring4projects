@@ -1,12 +1,14 @@
-
 # Relational database
-- JDBC
-  1) dependency
 
-  ​      <dependency>
-  ​		<groupId>org.springframework.boot</groupId>
-  ​		<artifactId>spring-boot-starter-jdbc</artifactId>
-  ​	</dependency>
+- JDBC
+  1) dependency      
+
+  ```
+  <dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-jdbc/artifactId>
+  </dependency>
+  ```
 
   2） javax.sql.Datasource
 
@@ -19,5 +21,12 @@
      JdbcTemplateConfiguration
 
 - JPA
+
+  - ```
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    ```
 
 - Transactions
