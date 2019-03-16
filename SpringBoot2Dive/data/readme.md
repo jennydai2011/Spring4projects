@@ -1,5 +1,7 @@
 # Relational database
 
+# Relational database
+
 - JDBC
   1) dependency      
 
@@ -28,5 +30,7 @@
        <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     ```
+
+  - Note that spring-boot-starter-data-jpa not conflict with jdbc
 
 - Transactions
