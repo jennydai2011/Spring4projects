@@ -7,4 +7,15 @@
     - JDBC
     - JPA
     - transactions
- 
+# Spring boot extension
+ ## Application 
+  - failure analysis
+  - feature
+  - event monitoring
+ ## configuration
+  - outside of app
+  - profile
+  - config properties
+ ## spring boot starter
+  - develop a starter
+  - best practice
