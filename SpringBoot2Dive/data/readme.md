@@ -1,7 +1,5 @@
 # Relational database
 
-# Relational database
-
 - JDBC
   1) dependency      
 
@@ -31,6 +29,45 @@
     </dependency>
     ```
 
-  - Note that spring-boot-starter-data-jpa not conflict with jdbc
+  - Note that spring-boot-starter-data-jpa depends on jdbc and not conflict with jdbc
+
+  - relationship mapping
+
+    - @javax.persistence.OneToOne
+    - @javax.persistence.OneToMany
+    - @javax.persistence.ManyToOne
+    - @javax.persistence.ManyToMany
+
+  - javax.persistence.EntityManager
+
+    - EntityManagerFactoryBuilder
+    - DefaultpersistenceUnitManager
+
+  - Autoconfiguration
+
+  - ```
+    HibernateJpaAutoConfiguration
+    ```
 
 - Transactions
+
+  1. Dependency
+
+     ```
+     <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+     </dependency>
+     ```
+
+  2. Spring trasaction manager
+
+     1. PlatformTransactionManager
+
+  3. JDBC transaction
+
+     1. DataSourceTransactionManager
+
+  4. AutoConfig
+
+     - TransactionAutoConfiguration
