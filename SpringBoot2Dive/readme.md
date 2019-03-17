@@ -10,10 +10,13 @@
 # Spring boot extension
  ## Application 
   - failure analysis
-  - feature
+  - feature - fluent API
+     - normal SpringApplication.run
+     - or SpringApplicationBuilder.web(WebApplicationType.NONE).run
+          
   - event monitoring
  ## configuration
-  - outside of app
+  - externalized configuration
   - profile
   - config properties
  ## spring boot starter
