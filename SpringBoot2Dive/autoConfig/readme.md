@@ -40,8 +40,8 @@
   //String value() default "";
  ```
   * @Component
-  ** @Repository
-  *** FirstLevelRepository
+    * @Repository
+      * FirstLevelRepository
  
  
  ### @Component 层次性
