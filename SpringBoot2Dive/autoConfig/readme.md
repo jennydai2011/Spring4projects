@@ -71,20 +71,35 @@
      框架实现 | @Enable注解模块 | 激活模块  
      --------|----------------|------------
      SpringFramework | @EnableMvc | Web MVC
+     --------|----------------|------------
                      | @EnableTransactionManagement|事务管理
+     --------|----------------|------------
                      | @EnableCaching|Caching
+     --------|----------------|------------
                      | @EnableMBeanExport|JMX模块
+     --------|----------------|------------
                      | @EnableAsync|异步处理模块
-                     | @EnableWebFlux|Web Flux模块
-                     | @EnableAspectJAutoProxy|AspectJ代理模块
+      --------|----------------|------------
+                    | @EnableWebFlux|Web Flux模块
+      --------|----------------|------------
+                    | @EnableAspectJAutoProxy|AspectJ代理模块
+     --------|----------------|------------
      Spring boot     | @EnableAutoConfiguration|自动装配模块
+     --------|----------------|------------
                      | @EnableManagementContext|Actuator模块
+     --------|----------------|------------
                      | @EnableConfigurationProperties|配置属性绑定模块
+     --------|----------------|------------
                      | @EnableOAuth2Sso|Oauth2单点登录模块
+     --------|----------------|------------
      Spring cloud    | @EnableEurekaServer | Eureka服务器模块
+     --------|----------------|------------
                      | @EnableConfigServer | 配置服务器模块
+     --------|----------------|------------
                      | @EnableFeignClients | Feign客户端模块
+     --------|----------------|------------
                      | @EnableZuulProxy | 服务器网关Zuul模块
+     --------|----------------|------------
                      | @EnableCircuitBreaker | 服务器熔断模块
                      
      
