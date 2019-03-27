@@ -14,18 +14,18 @@
          @ComponentScan - 3.1
  ```
  
- ### 基于xml
+  ### 基于xml
  ```<context:annotation-config/>
  <context:component-scan base-package="com.***.***" />
  ```
  
- ### 基于@ComponentScan - Spring boot 1.0 --starts from Spring4.0
+  ### 基于@ComponentScan - Spring boot 1.0 --starts from Spring4.0
  ```@ComponentScan(basePackage="...")
  public class SpringConfiguration{
  }
  ```
  
- ### @Component 派生性
+  ### @Component 派生性
  ```
  @Target(ElementType.TYPE)
  @Retention(RetentionPolicy.RUNTIME)
@@ -43,8 +43,8 @@
     * @Repository
       * FirstLevelRepository
  
- 
- ### @Component 层次性
+  * annotation本身没有继承、派生机制， 但是相当于派生
+  ### @Component 层次性
  ```
  @Target(ElementType.TYPE)
  @Retention(RetentionPolicy.RUNTIME)
@@ -53,6 +53,15 @@
  public @interface SecondLevelRepository{
  }
  ```
+   * @Component
+     * @Repository
+       * FirstLevelRepository
+         * SecondLevelRepository
+ 
+ ## Spring @Enable 模块装配
+  *  定义： 具备相同领域的功能组件集合，组合所形成一个独立的单元
+  *  举例： @EnableWebMVC. @EnableAutoConfiguration 等等
+  *  实现： 注解方式，编程方式
  
  
 # Spring boot auto config
