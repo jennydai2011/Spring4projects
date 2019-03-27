@@ -62,6 +62,31 @@
   *  定义： 具备相同领域的功能组件集合，组合所形成一个独立的单元
   *  举例： @EnableWebMVC. @EnableAutoConfiguration 等等
   *  实现： 注解方式，编程方式
- 
+   ···
+   SpringFramework 3.1开始支持@Enable模块驱动。所谓模块是指具备相同领域的功能的组件的集合
+   组合所形成一个独立的单元。比如web mvc模块， AspectJ代理模块， Caching（缓存）模块，JMX（Java管理扩展）模块
+   Async(异步处理）模块等。   
+   ···
+     ### @Eable模块注解举例
+     框架实现 | @Enable注解模块 | 激活模块  
+     --------|----------------|------------
+     SpringFramework | @EnableMvc | Web MVC
+                     | @EnableTransactionManagement|事务管理
+                     | @EnableCaching|Caching
+                     | @EnableMBeanExport|JMX模块
+                     | @EnableAsync|异步处理模块
+                     | @EnableWebFlux|Web Flux模块
+                     | @EnableAspectJAutoProxy|AspectJ代理模块
+     Spring boot     | @EnableAutoConfiguration|自动装配模块
+                     | @EnableManagementContext|Actuator模块
+                     | @EnableConfigurationProperties|配置属性绑定模块
+                     | @EnableOAuth2Sso|Oauth2单点登录模块
+     Spring cloud    | @EnableEurekaServer | Eureka服务器模块
+                     | @EnableConfigServer | 配置服务器模块
+                     | @EnableFeignClients | Feign客户端模块
+                     | @EnableZuulProxy | 服务器网关Zuul模块
+                     | @EnableCircuitBreaker | 服务器熔断模块
+                     
+     
  
 # Spring boot auto config
