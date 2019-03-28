@@ -1,4 +1,4 @@
-# [Spring framework manual config]
+# [Spring framework manual config](manualConfig.md)
 
      
  
