@@ -86,4 +86,29 @@
      | @EnableFeignClients | Feign客户端模块
      | @EnableZuulProxy | 服务器网关Zuul模块
      | @EnableCircuitBreaker | 服务器熔断模块
-                     
+   
+   ## 实现方式
+   
+       ### 注解驱动方式
+       ```
+       public @interface EnableWebMvc - @Import(DelegatingWebMvcConfiguration.class)
+       ```
+       ```
+       @Configuration
+       public class DelegatingWebMvcConfiguration extends WebMvcConfigurationSupport
+       ```
+       
+       ### 接口编程方式
+       ···
+       @Import(CachingConfigurationSelector.class)
+       public @interface EnableCaching
+       ···
+
+ ## 自定义@Enable模块
+ 
+ ### 基于注解驱动实现 - @EnableHelloWorld
+ EnableHelloWorldBootStrap - > EnableHelloWorld -> HelloWorldConfiguration -> HelloWorld
+ ### 基于接口驱动实现 - @EableServer - 更灵活，更推荐
+ 
+ HelloWorldImportSelector -> HelloWorldConfiguration  -> HelloWorld
+     
