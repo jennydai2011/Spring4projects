@@ -110,5 +110,33 @@
  EnableHelloWorldBootStrap - > EnableHelloWorld -> HelloWorldConfiguration -> HelloWorld
  ### 基于接口驱动实现 - @EableServer - 更灵活，更推荐
  
- HelloWorldImportSelector -> HelloWorldConfiguration  -> HelloWorld
-     
+ EnableHelloWorldBootStrap - > EnableHelloWorld -> HelloWorldImportSelector -> HelloWorldConfiguration  -> HelloWorld
+ 
+ ## Spring条件装配
+ * 定义： Bean 装配的前置判断
+ * 举例： @Profile, @Conditional
+ * 实现： 注解方式，编程方式
+ 
+ 从Spring Framework3.1开始，允许在Bean装配前增加前置条件判断
+ 
+ ### 条件注解举例
+ Spring注解 | 场景说明 | 
+ ----------|--------
+ @Profile  | 配置化条件装配 since 3.1
+ @Conditional | 编程条件装配 since 4.0
+ 
+ ```
+ @Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Conditional({OnClassCondition.class})
+public @interface ConditionalOnClass {
+    Class<?>[] value() default {};
+
+    String[] name() default {};
+}
+ ```
+ ## 自定义条件装配
+ ### 基于配置方式实现 - @Profile
+ 
+ ### 基于编程方式实现 - @ConditionalOnSystemProperty
