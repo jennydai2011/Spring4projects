@@ -138,5 +138,8 @@ public @interface ConditionalOnClass {
  ```
  ## 自定义条件装配
  ### 基于配置方式实现 - @Profile
+ 计算服务， 多整数求和sum
+ @Profile（“java7")" for循环
+ @Profile（”java8") Lambda
  
  ### 基于编程方式实现 - @ConditionalOnSystemProperty
