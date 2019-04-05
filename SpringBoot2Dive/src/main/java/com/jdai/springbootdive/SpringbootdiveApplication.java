@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @SpringBootApplication
-@ServletComponentScan(basePackages = "com.jdai.springbootdive.web.servlet")
+//@ServletComponentScan(basePackages = "com.jdai.springbootdive.web.servlet")
 public class SpringbootdiveApplication {
 
 	public static void main(String[] args) {
