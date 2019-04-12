@@ -2,4 +2,4 @@
 
      
  
-# Spring boot auto config
+# [Spring boot auto config](autoConfig.md)
