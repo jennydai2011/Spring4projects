@@ -141,5 +141,6 @@ public @interface ConditionalOnClass {
  计算服务， 多整数求和sum
  @Profile（“java7")" for循环
  @Profile（”java8") Lambda
+ Note to add @Service
  
  ### 基于编程方式实现 - @ConditionalOnSystemProperty
