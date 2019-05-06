@@ -1,0 +1,107 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>demo1</title>
+<script type="text/javascript" th:src="@{/js/jquery-3.4.0.min.js}"></script>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+		$('#demo1Button').click(function(){
+			$.ajax({
+				type: 'GET',				
+				url: '/api/ajaxrest/demo1',
+				success: function (result){
+					//alert('return from ajax controller demo1 method');
+					$('#result1').text(result);
+				}
+			});		
+		});
+		
+		$('#demo2Button').click(function(){
+			var fullname = $('#fullname').val();
+			$.ajax({
+				type: 'GET',				
+				url: '/api/ajaxrest/demo2/'+fullname,
+				success: function (result){
+					//alert('return from ajax controller demo1 method');
+					$('#result2').text(result);
+				}
+			});		
+		});
+		
+		$('#demo3Button').click(function(){
+			var fullname = $('#fullname').val();
+			$.ajax({
+				type: 'GET',				
+				url: '/api/ajaxrest/demo3',
+				dataType: 'json',
+				contentType: 'application/json',
+				success: function (result){
+					var p = 'id: '+result.id;
+					p += '<br/>name:'  +result.name;
+					p +='<br/>price: '+ result.price;
+					$('#result3').html(p);
+				}
+			});		
+		});
+		
+		$('#demo4Button').click(function(){
+			var fullname = $('#fullname').val();
+			$.ajax({
+				type: 'GET',				
+				url: '/api/ajaxrest/demo4',
+				dataType: 'json',
+				contentType: 'application/json',
+				success: function (result){
+					var p ='';
+					for(var i =0; i<result.length; i++){
+						p += '<br/>id: '+result[i].id;
+						p += '<br/>name:'  +result[i].name;
+						p +='<br/>price: '+ result[i].price;
+						p +='<br/>==================';
+					}
+					
+					$('#result4').html(p);
+				}
+			});		
+		});
+	});
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Demo 1</legend>
+		<input type="button" value="Demo1" id="demo1Button" />
+		<br/>
+		<span id="result1"></span>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Demo 2</legend>
+		Fullname<input type="text" value="" id="fullname" />
+		
+		<br/>
+		<input type="button" value="Demo2" id="demo2Button" />
+		<br/>
+		<span id="result2"></span>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Demo 3</legend>
+		Product
+		
+		<br/>
+		<input type="button" value="Demo3" id="demo3Button" />
+		<br/>
+		<span id="result3"></span>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Demo 4</legend>
+		Product list
+		
+		<br/>
+		<input type="button" value="Demo4" id="demo4Button" />
+		<br/>
+		<div id="result4"></div>
+	</fieldset>
+</body>
+</html>
