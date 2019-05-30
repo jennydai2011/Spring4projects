@@ -19,6 +19,7 @@ public class CountryController {
     @GetMapping("/")
     public String showPage(Model model, @RequestParam(defaultValue="0") int page){
         model.addAttribute("data", countryRepository.findAll(PageRequest.of(page, 4)));
+        model.addAttribute("currentPage", page);
         return "index";
     }
 
@@ -38,7 +39,8 @@ public class CountryController {
 
     @GetMapping("/find")
     @ResponseBody
-    public Country findOne(Integer id){
+    public Country findOne(@RequestParam Integer id){
+        System.out.println(" hit the findOne method!!!!!");
         return countryRepository.findById(id).get();
 
     }
