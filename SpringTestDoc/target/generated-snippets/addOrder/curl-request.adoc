@@ -1,0 +1,16 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/PlaceOrder' -i -X POST \
+    -H 'Content-Type: application/json' \
+    -d '[ {
+  "orderId" : 10,
+  "name" : "order10",
+  "price" : 100.0,
+  "quantity" : 3
+}, {
+  "orderId" : 11,
+  "name" : "order11",
+  "price" : 11.01,
+  "quantity" : 5
+} ]'
+----

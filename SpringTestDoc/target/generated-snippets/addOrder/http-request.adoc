@@ -1,0 +1,19 @@
+[source,http,options="nowrap"]
+----
+POST /PlaceOrder HTTP/1.1
+Content-Type: application/json
+Content-Length: 164
+Host: localhost:8080
+
+[ {
+  "orderId" : 10,
+  "name" : "order10",
+  "price" : 100.0,
+  "quantity" : 3
+}, {
+  "orderId" : 11,
+  "name" : "order11",
+  "price" : 11.01,
+  "quantity" : 5
+} ]
+----
