@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript" th:src="@{webjars/jquery/3.6.0/jquery.min.js}"></script>
+    <script src="/webjars/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.6.0/css/bootstrap.min.css}"/>
+
+    <title>WebJars Demo</title>
+
+
+    <script type="text/javascript">
+    function testAjax(){
+        $.ajax({
+            type:"GET",
+            url:"testAjax",
+            data:{id:1001},
+            dataType:"text",
+            success:function(msg){
+                console.log("ajax call return success..."+msg);
+                alert("return from server");
+            },
+            complete: function(){
+                console.log("ajax completed...");
+            }
+        });
+    }
+    </script>
+
+</head>
+<body>
+<input type="button" value="testAjax" onclick="testAjax()"></input>
+
+<a href="toView2">To view 2</a>
+<br>
+<a href="down">Test download</a>
+<div class="container"><br/>
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert"
+           aria-label="close">×</a>
+        <strong>Success!</strong> It is working as we expected.
+    </div>
+</div>
+
+
+
+</body>
+</html>

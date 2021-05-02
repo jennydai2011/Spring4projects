@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///Users/jinniandai/Java/JS_Projects/es6-learning/es6-1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-header">点击切换颜色</h2>
+        <div class="item">ss</div>
+        <div class="item">s2</div>
+        <div class="item">s3</div>
+    </div>
+    <script>
+        let a;
+        let b, c,d;
+        let e =100;
+        let f=521, g = 'iloveyou', h=[];
+
+        //1. es6 - let不可以重复赋值 - SyntaxError: 
+        //let aa =0;
+        //let aa =1;
+        
+        //before es 6 - var 可以重复定义，
+        var as =1;
+        var as =2;
+
+        //2. es6 - let 块级作用域
+        //ES 5 - 3个作用域，全局，函数内部，eval， 但是if/else, {}没有
+        //ES 6 - 块级作用域， if/else,{}
+        {
+            let girl = 'sss';
+        }
+        //定义在块级作用域的变量，离开块级作用域不能访问
+        //console.log(girl); //Uncaught ReferenceError: girl is not defined
+
+        //3. es6 - let 不存在变量提升 hoist
+        //console.log(song); //Uncaught ReferenceError: Cannot access 'song' before initialization
+        let song = "daren"; //只能在let定义 后使用； var 
+        console.log(song);
+
+        //4. es6 - let 不影响作用域
+        {
+            let school = 'learn';
+            function fn(){
+                console.log(school); //可以传递到作用域
+
+            }
+            fn();
+        }
+
+        //let 练习
+
+        let items = document.getElementsByClassName('item');
+
+        for(var i=0; i<items.length; i++){
+            items[i].onclick = function(){
+                //change color
+                this.style.background = 'pink';
+            }
+        }
+    </script>
+
+</body></html>
